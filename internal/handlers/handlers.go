@@ -13,6 +13,7 @@ import (
 )
 
 func HandleEndpoint(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type","text/html")
 	http.ServeFile(w, r, ".github/workflows/index.html")
 }
 
